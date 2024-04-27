@@ -9,7 +9,15 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { videos } from '../../../constants';
 // import { videos } from '../../constants/index';
-
+interface videoProps {
+  id:number,
+  video:string;
+  user:{
+    username:string;
+    profilePicture:string;
+  },
+  likes: string;
+}
 const videosData = [
   {
     id: 1,
@@ -79,7 +87,7 @@ const Home = () => {
       <FlatList
         data={videosData}
         keyExtractor={(item: { id: any }) => item.id}
-        renderItem={({ item }) => (
+        renderItem={({ item }:ListRenderItemInfo<videoProps>) => (
           <View>
             <Text className='text-white'>{item.user.username}</Text>
           </View>
