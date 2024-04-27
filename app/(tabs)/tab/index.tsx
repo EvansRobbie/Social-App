@@ -1,4 +1,10 @@
-import { View, Text, ScrollView, FlatList, ListRenderItemInfo } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  FlatList,
+  ListRenderItemInfo,
+} from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { videos } from '../../../constants';
@@ -70,12 +76,15 @@ const videosData = [
 const Home = () => {
   return (
     <SafeAreaView className='bg-black h-full'>
-      <FlatList data={videosData}  keyExtractor={(item: { id: any }) => item.id} renderItem={({item})=>(
-        <View>
-          <Text className='text-white'>{item.user.username}</Text>
-        </View>
-      )}/>
-       
+      <FlatList
+        data={videosData}
+        keyExtractor={(item: { id: any }) => item.id}
+        renderItem={({ item }) => (
+          <View>
+            <Text className='text-white'>{item.user.username}</Text>
+          </View>
+        )}
+      />
     </SafeAreaView>
   );
 };

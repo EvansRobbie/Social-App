@@ -75,7 +75,7 @@ const TabLayout = () => {
             tabBarIcon: ({ color, focused }) => (
               <View className='justify-center  items-center'>
                 <View className='px-2.5 py-1 rounded-lg bg-white border-r-4 border-l-4 border-[#00f2ea] border-r-[#ff0050] '>
-                  <PlusIcon color={'#000000'}  />
+                  <PlusIcon color={'#000000'} />
                 </View>
               </View>
             ),

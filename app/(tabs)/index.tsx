@@ -1,4 +1,10 @@
-import { View, Text, ScrollView, FlatList, ListRenderItemInfo } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  FlatList,
+  ListRenderItemInfo,
+} from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { videos } from '../../constants/index';
@@ -71,7 +77,7 @@ const Home = () => {
   return (
     <Stack>
       {/* <Stack.Screen name='index' options={{ headerShown:false}}/> */}
-      <Stack.Screen name='tab' options={{ headerShown:false}}/>
+      <Stack.Screen name='tab' options={{ headerShown: false }} />
     </Stack>
   );
 };
